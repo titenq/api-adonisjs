@@ -21,5 +21,5 @@ const { Ignitor } = require('@adonisjs/ignitor')
 
 new Ignitor(require('@adonisjs/fold'))
   .appRoot(__dirname)
-  .fireHttpServer(process.env.PORT || 3000)
+  .fireHttpServer()
   .catch(console.error)
