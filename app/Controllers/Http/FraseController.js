@@ -21,6 +21,7 @@ class FraseController {
    */
   async index() {
     const frases = await Frase.query()
+      .orderBy('created_at', 'asc')
       .with('user')
       .fetch();
 
