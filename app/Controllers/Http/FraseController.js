@@ -22,7 +22,6 @@ class FraseController {
   async index() {
     const frases = await Frase.query()
       .with('user')
-      .request.only(['id', 'username', 'email', 'created_at', 'updated_at'])
       .fetch();
 
     return frases;
